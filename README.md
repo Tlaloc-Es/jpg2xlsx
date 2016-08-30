@@ -13,4 +13,4 @@ Use
 --
 The xls is created during execution.
 
-python jpg2xlsx.py /IMAGE/PATH XLS/PATH
+python jpg2xlsx.py /IMAGE/PATH XLSX/PATH
