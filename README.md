@@ -8,3 +8,9 @@ You need install these packages in ubuntu for that jpg2excel work.
 sudo apt-get install python-pip python-dev build-essential 
 sudo pip install --upgrade pip 
 sudi pip install XlsxWriter
+
+Use
+--
+The xls is created during execution.
+
+python jpg2xls.py /IMAGE/PATH XLS/PATH
