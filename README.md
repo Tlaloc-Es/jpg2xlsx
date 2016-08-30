@@ -1,4 +1,4 @@
-# jpg2excel
+# jpg2xls
 Library in python for export jpg´s pixels to xls''s cells background.
 
 Installing package dependency in ubuntu
