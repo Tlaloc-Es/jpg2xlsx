@@ -1,3 +1,9 @@
+## v0.2.1 (2026-04-15)
+
+### Fix
+
+- restore README
+
 ## v0.2.0 (2026-04-15)
 
 ### BREAKING CHANGE
