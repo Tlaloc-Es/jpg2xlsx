@@ -1,3 +1,11 @@
+## v0.2.2 (2026-04-15)
+
+### Fix
+
+- restore version to 0.2.1 to match existing tag
+- readme
+- restore README
+
 ## v0.2.0 (2026-04-15)
 
 ### BREAKING CHANGE
