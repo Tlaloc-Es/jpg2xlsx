@@ -1,0 +1,33 @@
+name: Bump version
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bump-version-master
+  cancel-in-progress: false
+
+jobs:
+  bump_version:
+    if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message || '', 'bump:')
+    runs-on: ubuntu-latest
+    name: "Bump version and create changelog with commitizen"
+    steps:
+      - name: Check out
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.GITHUB_TOKEN }}"
+      - id: cz
+        name: Create bump and changelog
+        uses: commitizen-tools/commitizen-action@0.27.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Print Version
+        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
